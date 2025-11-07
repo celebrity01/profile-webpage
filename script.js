@@ -120,7 +120,12 @@ document.head.appendChild(style);
 const downloadBtn = document.querySelector('.btn-primary');
 if (downloadBtn) {
     downloadBtn.addEventListener('click', () => {
-        alert('CV download would be implemented here!');
+        const link = document.createElement('a');
+        link.href = 'Sani_Zaharadeen_CV.pdf';
+        link.download = 'Sani_Zaharadeen_CV.pdf';
+        document.body.appendChild(link);
+        link.click();
+        document.body.removeChild(link);
     });
 }
 
